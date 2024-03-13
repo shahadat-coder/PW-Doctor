@@ -1,9 +1,9 @@
 import'package:flutter/material.dart';
 
-Widget displayMedium (BuildContext context, String data){
+Widget titleLarge (BuildContext context, String data){
   return Text(
     data,
-    style: Theme.of(context).textTheme.displayMedium,
+    style: Theme.of(context).textTheme.titleLarge,
   );
 }
 

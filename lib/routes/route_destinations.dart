@@ -1,6 +1,7 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/views/auth/login_screen.dart';
+import 'package:pw_doctor/views/auth/signup_screen.dart';
 import 'package:pw_doctor/views/onboardings/onboarding_screen.dart';
 import 'package:pw_doctor/views/splash_screen.dart';
 
@@ -17,6 +18,10 @@ class RouteDestinations{
     GetPage(
       name: RouteNames.login,
       page: ()=> const LoginScreen(),
+    ),
+    GetPage(
+      name: RouteNames.signup,
+      page: ()=> const SignUpScreen(),
     ),
   ];
 }

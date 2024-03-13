@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pw_doctor/global_widgets/custom_appbar.dart';
 import 'package:pw_doctor/global_widgets/custom_button.dart';
+import 'package:pw_doctor/global_widgets/custom_or_divider.dart';
 import 'package:pw_doctor/global_widgets/custom_text.dart';
+import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/utils/colors.dart';
 import 'package:pw_doctor/utils/social_button.dart';
 
@@ -21,7 +24,9 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
         body: Center(
           child:
-              Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+              Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
             Image.asset('assets/images/image_tree.png'),
             const SizedBox(
               height: 10,
@@ -32,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             SocialButton(
                 image: Image.asset('assets/images/facebook.png'),
-                title: 'Continue with Google',
+                title: 'Continue with Facebook',
                 onTap: () {}),
             const SizedBox(
               height: 12,
@@ -51,39 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
             const SizedBox(
               height: 30,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: Divider(
-                    indent: 5,
-                    endIndent: 5,
-                    thickness: 0.7,
-                    color: Colors.grey.withOpacity(0.5),
-                  ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(
-                    vertical: 0,
-                    horizontal: 10,
-                  ),
-                  child: Text(
-                    'Or',
-                    style: TextStyle(
-                      color: Colors.black45,
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Divider(
-                    indent: 5,
-                    endIndent: 5,
-                    thickness: 0.7,
-                    color: Colors.grey.withOpacity(0.5),
-                  ),
-                ),
-              ],
-            ),
+            const OrDividerWidget(label: 'Or',),
             const SizedBox(height: 30),
             CustomButton(title: 'Sign in with Password', onTap: () {}),
             const SizedBox(height: 15),
@@ -93,7 +66,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 const Text("Don't have an account?",
                     style: TextStyle(color: Colors.grey)),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.toNamed(RouteNames.signup);
+                  },
                   style: TextButton.styleFrom(
                     foregroundColor: AppColors.primaryColors,
                   ),
@@ -105,3 +80,5 @@ class _LoginScreenState extends State<LoginScreen> {
         ));
   }
 }
+
+
