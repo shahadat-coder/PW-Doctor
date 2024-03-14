@@ -48,7 +48,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         ),
       ],
       onDone: () {
-          Get.toNamed(RouteNames.login);
+          Get.toNamed(RouteNames.loginmethods);
       },
       done: const Text(
         'Done',

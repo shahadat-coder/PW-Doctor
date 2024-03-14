@@ -4,9 +4,10 @@ import 'package:pw_doctor/global_widgets/custom_appbar.dart';
 import 'package:pw_doctor/global_widgets/custom_button.dart';
 import 'package:pw_doctor/global_widgets/custom_or_divider.dart';
 import 'package:pw_doctor/global_widgets/custom_text.dart';
+import 'package:pw_doctor/global_widgets/custom_textfield.dart';
 import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/utils/colors.dart';
-import 'package:pw_doctor/utils/social_button.dart';
+import 'package:pw_doctor/utils/remeberRow.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -16,69 +17,142 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passController = TextEditingController();
+  final GlobalKey<FormState> globalkey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: const CustomAppBar(
-          isLeading: true,
-        ),
-        body: Center(
-          child:
-              Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-            Image.asset('assets/images/image_tree.png'),
-            const SizedBox(
-              height: 10,
-            ),
-            headlineLarge(context, "Let's you in"),
-            const SizedBox(
-              height: 20,
-            ),
-            SocialButton(
-                image: Image.asset('assets/images/facebook.png'),
-                title: 'Continue with Facebook',
-                onTap: () {}),
-            const SizedBox(
-              height: 12,
-            ),
-            SocialButton(
-                image: Image.asset('assets/images/google.png'),
-                title: 'Continue with Google',
-                onTap: () {}),
-            const SizedBox(
-              height: 12,
-            ),
-            SocialButton(
-                image: Image.asset('assets/images/apple.png'),
-                title: 'Continue with Apple',
-                onTap: () {}),
-            const SizedBox(
-              height: 30,
-            ),
-            const OrDividerWidget(label: 'Or',),
-            const SizedBox(height: 30),
-            CustomButton(title: 'Sign in with Password', onTap: () {}),
-            const SizedBox(height: 15),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+      appBar: const CustomAppBar(
+        isLeading: true,
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(top: 50),
+          child: Center(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const Text("Don't have an account?",
-                    style: TextStyle(color: Colors.grey)),
+                Image.asset('assets/images/hand.png'),
+                const SizedBox(
+                  height: 20,
+                ),
+                titleLarge(context, 'Login to your account'),
+                const SizedBox(
+                  height: 25,
+                ),
+                Form(
+                  key: globalkey,
+                  child: const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    child: TextFieldWidget(),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Center(child: RememberWidget()),
+                const SizedBox(
+                  height: 25,
+                ),
+                CustomButton(title: 'Sign in', onTap: () {}),
+                const SizedBox(
+                  height: 20,
+                ),
                 TextButton(
                   onPressed: () {
-                    Get.toNamed(RouteNames.signup);
+                    Get.toNamed(RouteNames.login);
                   },
                   style: TextButton.styleFrom(
                     foregroundColor: AppColors.primaryColors,
+
                   ),
-                  child: const Text('Sign up'),
+                  child: const Text('Forget the password?'),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const OrDividerWidget(
+                  label: 'Or continue with',
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    InkWell(
+                      onTap: () {},
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          border: Border.all(color: Colors.grey.shade300, width: 1),
+                        ),
+                        width: 60,
+                        height: 60,
+                        child: Image.asset(
+                          'assets/images/facebook.png',
+                          height: 30,
+                          width: 30,
+                        ),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {},
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          border: Border.all(color: Colors.grey.shade300, width: 1),
+                        ),
+                        width: 60,
+                        height: 60,
+                        child: Image.asset('assets/images/google.png',
+                            height: 30, width: 30),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {},
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          border: Border.all(color: Colors.grey.shade300, width: 1),
+                        ),
+                        width: 60,
+                        height: 60,
+                        child: Image.asset(
+                          'assets/images/apple.png',
+                          height: 30,
+                          width: 30,
+                        ),
+                      ),
+                    ),
+
+                  ],
+                ),
+                SizedBox(height: 30,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text("Already have an account",
+                        style: TextStyle(color: Colors.grey)),
+                    TextButton(
+                      onPressed: () {
+                        Get.toNamed(RouteNames.signup);
+                      },
+                      style: TextButton.styleFrom(
+                        foregroundColor: AppColors.primaryColors,
+                      ),
+                      child: const Text('Sign up'),
+                    ),
+                  ],
                 ),
               ],
             ),
-          ]),
-        ));
+          ),
+        ),
+      ),
+    );
   }
 }
-
-
