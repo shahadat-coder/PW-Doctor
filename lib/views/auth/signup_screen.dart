@@ -42,12 +42,26 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 const SizedBox(
                   height: 25,
                 ),
-                Form(
-                  key: globalkey,
-                  child: const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20),
-                    child: TextFieldWidget(),
-                  ),
+                TextFieldWidget(
+                  controller: emailController,
+                  prefixIcon: Icons.email,
+                  prefixIconColor: Colors.grey,
+                  hintText: 'Email',
+                  hintColor: Colors.grey,
+                  keyboardType: TextInputType.emailAddress,
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                TextFieldWidget(
+                  controller: passController,
+                  prefixIcon: Icons.lock,
+                  prefixIconColor: Colors.grey,
+                  hintText: 'Password',
+                  hintColor: Colors.grey,
+                  keyboardType: TextInputType.emailAddress,
+                  suffixIcon: Icons.visibility_off_sharp,
+                  suffixIconColor: Colors.grey,
                 ),
                 const SizedBox(
                   height: 20,

@@ -42,12 +42,26 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(
                   height: 25,
                 ),
-                Form(
-                  key: globalkey,
-                  child: const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20),
-                    child: TextFieldWidget(),
-                  ),
+                TextFieldWidget(
+                  controller: emailController,
+                  prefixIcon: Icons.email,
+                  prefixIconColor: Colors.grey,
+                  hintText: 'Email',
+                  hintColor: Colors.grey,
+                  keyboardType: TextInputType.emailAddress,
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                TextFieldWidget(
+                  controller: passController,
+                  prefixIcon: Icons.lock,
+                  prefixIconColor: Colors.grey,
+                  hintText: 'Password',
+                  hintColor: Colors.grey,
+                  keyboardType: TextInputType.visiblePassword,
+                  suffixIcon: Icons.visibility_off_sharp,
+                  suffixIconColor: Colors.grey,
                 ),
                 const SizedBox(
                   height: 20,
@@ -56,7 +70,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(
                   height: 25,
                 ),
-                CustomButton(title: 'Sign in', onTap: () {}),
+                CustomButton(title: 'Sign in', onTap: () {
+                  Get.toNamed(RouteNames.fillProfile);
+                }),
                 const SizedBox(
                   height: 20,
                 ),
