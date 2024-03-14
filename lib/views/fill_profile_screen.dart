@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pw_doctor/global_widgets/custom_appbar.dart';
 import 'package:pw_doctor/global_widgets/custom_button.dart';
 import 'package:pw_doctor/global_widgets/custom_textfield.dart';
+import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/utils/colors.dart';
 
 class FillYourProfileScreen extends StatefulWidget {
@@ -128,7 +130,9 @@ class _FillYourProfileScreenState extends State<FillYourProfileScreen> {
                 const SizedBox(
                   height: 50,
                 ),
-                CustomButton(title: 'Continue', onTap: (){}),
+                CustomButton(title: 'Continue', onTap: (){
+                 Get.toNamed(RouteNames.createPin);
+                }),
               ],
             ),
           ),

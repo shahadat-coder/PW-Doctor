@@ -5,6 +5,7 @@ import 'package:pw_doctor/views/auth/loginmathods_screen.dart';
 import 'package:pw_doctor/views/auth/signup_screen.dart';
 import 'package:pw_doctor/views/fill_profile_screen.dart';
 import 'package:pw_doctor/views/onboardings/onboarding_screen.dart';
+import 'package:pw_doctor/views/pin_screen.dart';
 import 'package:pw_doctor/views/splash_screen.dart';
 
 class RouteDestinations{
@@ -32,6 +33,10 @@ class RouteDestinations{
     GetPage(
       name: RouteNames.fillProfile,
       page: ()=> const FillYourProfileScreen(),
+    ),
+    GetPage(
+      name: RouteNames.createPin,
+      page: ()=> const CreatePinScreen(),
     ),
   ];
 }
