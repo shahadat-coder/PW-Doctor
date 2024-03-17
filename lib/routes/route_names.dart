@@ -6,4 +6,6 @@ class RouteNames{
   static const String login = '/login';
   static const String fillProfile = '/fillProfile';
   static const String createPin = '/createPin';
+  static const String createFinger = '/createFinger';
+  static const String forgotPass = '/forgotPass';
 }

@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:pw_doctor/utils/colors.dart';
 
 class SocialButton extends StatefulWidget {
-  const SocialButton({Key? key, required this.title, required this.onTap, this.backgroundColor, this.titleColor, required this.image}) : super(key: key);
+  const SocialButton({Key? key, required this.title, required this.onTap, this.backgroundColor, this.titleColor,  this.image}) : super(key: key);
 
   final String title;
   final void Function() onTap;
   final Color? backgroundColor;
   final Color? titleColor;
-  final Image image;
+  final Image? image;
 
   @override
   State<SocialButton> createState() => _SocialButtonState();
@@ -35,8 +35,8 @@ class _SocialButtonState extends State<SocialButton> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                widget.image,
-                SizedBox(width: 5,),
+                widget.image!,
+                const SizedBox(width: 5,),
                 Text(
                   widget.title,
                   style:   TextStyle(

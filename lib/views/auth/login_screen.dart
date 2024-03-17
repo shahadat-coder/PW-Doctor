@@ -78,7 +78,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 TextButton(
                   onPressed: () {
-                    Get.toNamed(RouteNames.login);
+                    Get.toNamed(RouteNames.forgotPass);
                   },
                   style: TextButton.styleFrom(
                     foregroundColor: AppColors.primaryColors,

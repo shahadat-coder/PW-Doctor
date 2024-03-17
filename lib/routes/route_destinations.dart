@@ -4,6 +4,8 @@ import 'package:pw_doctor/views/auth/login_screen.dart';
 import 'package:pw_doctor/views/auth/loginmathods_screen.dart';
 import 'package:pw_doctor/views/auth/signup_screen.dart';
 import 'package:pw_doctor/views/fill_profile_screen.dart';
+import 'package:pw_doctor/views/finger_screen.dart';
+import 'package:pw_doctor/views/forgot_pass/forgot_password.dart';
 import 'package:pw_doctor/views/onboardings/onboarding_screen.dart';
 import 'package:pw_doctor/views/pin_screen.dart';
 import 'package:pw_doctor/views/splash_screen.dart';
@@ -37,6 +39,14 @@ class RouteDestinations{
     GetPage(
       name: RouteNames.createPin,
       page: ()=> const CreatePinScreen(),
+    ),
+    GetPage(
+      name: RouteNames.createFinger,
+      page: ()=> const FingerScreen(),
+    ),
+    GetPage(
+      name: RouteNames.forgotPass,
+      page: ()=> const ForgotPasswordScreen(),
     ),
   ];
 }

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:pw_doctor/global_widgets/custom_appbar.dart';
 import 'package:pw_doctor/global_widgets/custom_button.dart';
+import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/utils/colors.dart';
 
 class CreatePinScreen extends StatefulWidget {
@@ -52,7 +55,9 @@ class _CreatePinScreenState extends State<CreatePinScreen> {
                   selectedColor: Colors.grey.withOpacity(0.2),
                 ), appContext: context),
                   const SizedBox(height: 250,),
-                  CustomButton(title: 'Continue', onTap: (){}),
+                  CustomButton(title: 'Continue', onTap: (){
+                    Get.toNamed(RouteNames.createFinger);
+                  }),
                   
                 ],
               ),

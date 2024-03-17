@@ -4,9 +4,10 @@ import 'package:pw_doctor/global_widgets/custom_appbar.dart';
 import 'package:pw_doctor/global_widgets/custom_button.dart';
 import 'package:pw_doctor/global_widgets/custom_or_divider.dart';
 import 'package:pw_doctor/global_widgets/custom_text.dart';
+import 'package:pw_doctor/global_widgets/social_button.dart';
 import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/utils/colors.dart';
-import 'package:pw_doctor/utils/social_button.dart';
+
 
 class LoginMethodsScreen extends StatefulWidget {
   const LoginMethodsScreen({super.key});
