@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pw_doctor/global_widgets/custom_appbar.dart';
 import 'package:pw_doctor/global_widgets/descriptin_title.dart';
 import 'package:pw_doctor/global_widgets/option_button.dart';
+import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/utils/colors.dart';
 
 class FingerScreen extends StatefulWidget {
@@ -47,40 +49,49 @@ class _FingerScreenState extends State<FingerScreen> {
                     onTap: () {
                       showDialog(
                         context: context,
-                        builder: (context) => AlertDialog(
-                          backgroundColor: Colors.transparent,
-                          content: Container(
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            padding: const EdgeInsets.all(20),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Image.asset(
-                                  'assets/images/person.png',
-                                  height: 200,
-                                  width: 200,
-                                ),
-                                const SizedBox(height: 20),
-                                const Text(
-                                  "Congratulations!",
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    color: AppColors.primaryColors,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
+                        builder: (context) {
+                          Future.delayed(const Duration(seconds: 5), () {
+                            Get.toNamed(RouteNames.homePage);
+                          });
+                          return AlertDialog(
+                            backgroundColor: Colors.transparent,
+                            content: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              padding: const EdgeInsets.all(20),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Image.asset(
+                                    'assets/images/person.png',
+                                    height: 200,
+                                    width: 200,
                                   ),
-                                ),
-                                const SizedBox(height: 10),
-                                const DescribeText(title: "Your account is ready to use. You will be redirected to the Home page in a few seconds.",),
-                                const SizedBox(height: 20),
-                                const CircularProgressIndicator(color: AppColors.primaryColors,),
-                              ],
+                                  const SizedBox(height: 20),
+                                  const Text(
+                                    "Congratulations!",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      color: AppColors.primaryColors,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 10),
+                                  const DescribeText(
+                                    title: "Your account is ready to use. You will be redirected to the Home page in a few seconds.",
+                                  ),
+                                  const SizedBox(height: 20),
+                                  const CircularProgressIndicator(
+                                    color: AppColors.primaryColors,
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                        ),
+                          );
+                        },
                       );
                     },
                     backgroundColor: AppColors.primaryColors,

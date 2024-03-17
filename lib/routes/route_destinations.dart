@@ -1,13 +1,16 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:pw_doctor/routes/route_names.dart';
+import 'package:pw_doctor/views/auth/finger_screen.dart';
 import 'package:pw_doctor/views/auth/login_screen.dart';
 import 'package:pw_doctor/views/auth/loginmathods_screen.dart';
+import 'package:pw_doctor/views/auth/pin_screen.dart';
 import 'package:pw_doctor/views/auth/signup_screen.dart';
-import 'package:pw_doctor/views/fill_profile_screen.dart';
-import 'package:pw_doctor/views/finger_screen.dart';
+import 'package:pw_doctor/views/auth/fill_profile_screen.dart';
 import 'package:pw_doctor/views/forgot_pass/forgot_password.dart';
+import 'package:pw_doctor/views/forgot_pass/new_password/new_password.dart';
+import 'package:pw_doctor/views/home_page.dart';
 import 'package:pw_doctor/views/onboardings/onboarding_screen.dart';
-import 'package:pw_doctor/views/pin_screen.dart';
+import 'package:pw_doctor/views/otp_verification/otp_verification.dart';
 import 'package:pw_doctor/views/splash_screen.dart';
 
 class RouteDestinations{
@@ -47,6 +50,18 @@ class RouteDestinations{
     GetPage(
       name: RouteNames.forgotPass,
       page: ()=> const ForgotPasswordScreen(),
+    ),
+    GetPage(
+      name: RouteNames.otpVerified,
+      page: ()=> const OtpVerificationScreen(),
+    ),
+    GetPage(
+      name: RouteNames.newCreatePass,
+      page: ()=> const CreateNewPasswordScreen(),
+    ),
+    GetPage(
+      name: RouteNames.homePage,
+      page: ()=> const HomeScreen(),
     ),
   ];
 }
