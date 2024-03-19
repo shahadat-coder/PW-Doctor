@@ -24,8 +24,8 @@ class ItemCart extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  height: 75,
-                  width: 75,
+                  height: 70,
+                  width: 70,
                   decoration: BoxDecoration(
                     color: AppColors.primaryColors.withOpacity(0.2),
                     borderRadius: BorderRadius.circular(100),

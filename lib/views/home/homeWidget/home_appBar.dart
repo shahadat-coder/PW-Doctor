@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pw_doctor/global_widgets/descriptin_title.dart';
 import 'package:pw_doctor/routes/route_names.dart';
-import 'package:pw_doctor/views/home/notification_screen.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppBar({super.key});

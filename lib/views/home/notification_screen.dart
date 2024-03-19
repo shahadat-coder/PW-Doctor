@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pw_doctor/global_widgets/custom_appbar.dart';
 import 'package:pw_doctor/global_widgets/custom_text.dart';
-import 'package:pw_doctor/global_widgets/descriptin_title.dart';
-import 'package:pw_doctor/models/doctor_speciality_model.dart';
 import 'package:pw_doctor/models/notification_model.dart';
 import 'package:pw_doctor/utils/colors.dart';
 
@@ -55,7 +53,17 @@ class _NotificationScreenState extends State<NotificationScreen> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    labelLarge(context, "${notification[index].name}"),
+                    Text(
+                      ("${notification[index].name}"),
+                      maxLines: 1, // Ensure text does not exceed one line
+                      overflow: TextOverflow.ellipsis, // Handle overflow with ellipsis
+                      style: const TextStyle(
+                        wordSpacing: 0.15,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 15, // Reduced font size
+                        color: Colors.black,
+                      ),
+                    ),
                     Text(
                       "${notification[index].timeDate}",
                       style: const TextStyle(
@@ -66,7 +74,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                     ),
                   ],
                 ),
-                SizedBox(width: 90),
+                SizedBox(width: 80),
                 if (isFirstOrSecond) // Conditionally add chip for first two items
                   Chip(
                     label: const Text(
