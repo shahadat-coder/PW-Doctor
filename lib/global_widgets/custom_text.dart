@@ -19,3 +19,9 @@ Widget bodyMedium (BuildContext context, String data){
     style: Theme.of(context).textTheme.bodyMedium,
   );
 }
+Widget labelLarge (BuildContext context, String data){
+  return Text(
+    data,
+    style: Theme.of(context).textTheme.labelLarge,
+  );
+}

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pw_doctor/global_widgets/descriptin_title.dart';
+import 'package:pw_doctor/routes/route_names.dart';
+import 'package:pw_doctor/views/home/notification_screen.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppBar({super.key});
@@ -32,9 +35,15 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
           ],
         ),
         actions: [
-          Image.asset('assets/images/notification.png',height: 25,width: 25,),
+          InkWell(
+            onTap: (){
+              Get.toNamed(RouteNames.notification);
+            },
+              child: Image.asset('assets/images/notification.png',height: 25,width: 25,)),
           const SizedBox(width: 10,),
-          Image.asset('assets/images/favourite.png',height: 25,width: 25,),
+          InkWell(
+            onTap: (){},
+              child: Image.asset('assets/images/favourite.png',height: 25,width: 25,)),
 
         ],
       ),
