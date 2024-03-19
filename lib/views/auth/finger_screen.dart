@@ -51,7 +51,7 @@ class _FingerScreenState extends State<FingerScreen> {
                         context: context,
                         builder: (context) {
                           Future.delayed(const Duration(seconds: 5), () {
-                            Get.toNamed(RouteNames.homePage);
+                            Get.toNamed(RouteNames.navBar);
                           });
                           return AlertDialog(
                             backgroundColor: Colors.transparent,

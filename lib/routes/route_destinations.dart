@@ -6,6 +6,7 @@ import 'package:pw_doctor/views/auth/loginmathods_screen.dart';
 import 'package:pw_doctor/views/auth/pin_screen.dart';
 import 'package:pw_doctor/views/auth/signup_screen.dart';
 import 'package:pw_doctor/views/auth/fill_profile_screen.dart';
+import 'package:pw_doctor/views/bottom_nav.dart';
 import 'package:pw_doctor/views/forgot_pass/forgot_password.dart';
 import 'package:pw_doctor/views/forgot_pass/new_password/new_password.dart';
 import 'package:pw_doctor/views/home/home_page.dart';
@@ -62,6 +63,10 @@ class RouteDestinations{
     GetPage(
       name: RouteNames.homePage,
       page: ()=> const HomeScreen(),
+    ),
+    GetPage(
+      name: RouteNames.navBar,
+      page: ()=> const BottomNavBaseScreen(),
     ),
   ];
 }

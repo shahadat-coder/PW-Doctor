@@ -20,7 +20,7 @@ class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
       children: [
         CarouselSlider(
           options: CarouselOptions(
-            height: 125.0,
+            height: 150.0,
             viewportFraction: 0.8,
             autoPlay: true,
             enlargeCenterPage: true,
@@ -39,7 +39,7 @@ class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
                     margin: const EdgeInsets.symmetric(horizontal: 5.0),
                     decoration: BoxDecoration(
                       color: AppColors.primaryColors.withOpacity(0.15),
-                      borderRadius: BorderRadius.circular(40),
+                      borderRadius: BorderRadius.circular(70),
                     ),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8),
@@ -70,10 +70,10 @@ class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
                 margin: const EdgeInsets.symmetric(horizontal: 4),
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: value == i ? AppColors.greenColors : Colors.grey,
+                    color: value == i ? AppColors.primaryColors: Colors.grey,
                   ),
                   borderRadius: BorderRadius.circular(100),
-                  color: value == i ? AppColors.greenColors : null,
+                  color: value == i ? AppColors.primaryColors : null,
                 ),
               ));
             }

@@ -11,4 +11,5 @@ class RouteNames{
   static const String otpVerified = '/otpVerified';
   static const String newCreatePass = '/newCreatePass';
   static const String homePage = '/homePage';
+  static const String navBar = '/navBar';
 }
