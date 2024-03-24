@@ -41,7 +41,9 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
               child: Image.asset('assets/images/notification.png',height: 25,width: 25,)),
           const SizedBox(width: 10,),
           InkWell(
-            onTap: (){},
+            onTap: (){
+              Get.toNamed(RouteNames.favouriteDoctor);
+            },
               child: Image.asset('assets/images/favourite.png',height: 25,width: 25,)),
 
         ],

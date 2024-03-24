@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pw_doctor/global_widgets/custom_appbar.dart';
-import 'package:pw_doctor/global_widgets/custom_text.dart';
 import 'package:pw_doctor/models/notification_model.dart';
 import 'package:pw_doctor/utils/colors.dart';
 
@@ -49,7 +48,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                     ),
                   ),
                 ),
-                SizedBox(width: 15),
+                const SizedBox(width: 15),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

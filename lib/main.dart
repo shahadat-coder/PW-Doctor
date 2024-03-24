@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/src/root/parse_route.dart';
 import 'package:pw_doctor/routes/route_destinations.dart';
 import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/utils/config.dart';
-
 import 'utils/themes.dart';
 
 void main() {

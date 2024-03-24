@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CartModel {
+class NotificationModel {
   String? name;
   String? timeDate;
   String? subtitle;
@@ -8,7 +8,7 @@ class CartModel {
   final Color iconColor; // Remove the required keyword
   final IconData icon;
 
-  CartModel({
+  NotificationModel({
     required this.name,
     required this.timeDate,
     required this.subtitle,
@@ -18,8 +18,8 @@ class CartModel {
   });
 }
 
-final List<CartModel> notification = [
-  CartModel(
+final List<NotificationModel> notification = [
+  NotificationModel(
     name: "Appointment Cancelled",
      timeDate: 'Today | 15:36 PM',
     subtitle:
@@ -28,7 +28,7 @@ final List<CartModel> notification = [
     backgroundColor: Colors.red.shade100, // Provide background color for this item
     iconColor: Colors.red,
   ),
-  CartModel(
+  NotificationModel(
     name: "Schedule Changed",
     timeDate: 'Yesterday | 04:36 PM',
     subtitle:
@@ -37,7 +37,7 @@ final List<CartModel> notification = [
     backgroundColor: Colors.green.shade100, // Provide background color for this item
     iconColor: Colors.green,
   ),
-  CartModel(
+  NotificationModel(
     name: "Appointment Success!",
     timeDate: '2,Des,24 | 08:36 PM',
     subtitle:
@@ -46,7 +46,7 @@ final List<CartModel> notification = [
     backgroundColor: Colors.blue.shade100, // Provide background color for this item
     iconColor: Colors.blue,
   ),
-  CartModel(
+  NotificationModel(
     name: "New Services Available",
     timeDate: '12,Mar,24 | 12:36 AM',
     subtitle:
@@ -55,7 +55,7 @@ final List<CartModel> notification = [
     backgroundColor: Colors.orange.shade100, // Provide background color for this item
     iconColor: Colors.orange,
   ),
-  CartModel(
+  NotificationModel(
     name: "Credit Card Connected",
     timeDate: '21,Jan,24 | 07:36 PM',
     subtitle:
