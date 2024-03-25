@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pw_doctor/global_widgets/descriptin_title.dart';
 import 'package:pw_doctor/utils/colors.dart';
 
 class ArivableRow extends StatelessWidget {
   const ArivableRow({
-    super.key, required this.title,
-  });
-final String title;
+    Key? key,
+    required this.title,
+    this.onTap,
+  }) : super(key: key);
+
+  final String title;
+  final VoidCallback? onTap;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -14,7 +20,7 @@ final String title;
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-           Column(
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
@@ -24,16 +30,16 @@ final String title;
                   fontWeight: FontWeight.w500,
                   fontSize: 20,
                   color: Colors.black,
-
                 ),
               ),
-
             ],
           ),
           InkWell(
-            onTap: () {},
-            child:
-                const DescribeText(title: 'See All',color: AppColors.primaryColors,),
+            onTap: onTap,
+            child: const DescribeText(
+              title: 'See All',
+              color: AppColors.primaryColors,
+            ),
           )
         ],
       ),

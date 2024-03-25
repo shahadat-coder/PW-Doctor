@@ -14,4 +14,5 @@ class RouteNames{
   static const String navBar = '/navBar';
   static const String notification = '/notification';
   static const String favouriteDoctor = '/favouriteDoctor';
+  static const String topDoctor = '/topDoctor';
 }

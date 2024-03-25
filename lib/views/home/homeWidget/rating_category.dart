@@ -3,14 +3,14 @@ import 'package:get/get.dart';
 import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/utils/colors.dart';
 
-class DoctorsCategory extends StatefulWidget {
-  const DoctorsCategory({Key? key}) : super(key: key);
+class RatingCategory extends StatefulWidget {
+  const RatingCategory({Key? key}) : super(key: key);
 
   @override
-  State<DoctorsCategory> createState() => _DoctorsCategoryState();
+  State<RatingCategory> createState() => _RatingCategoryState();
 }
 
-class _DoctorsCategoryState extends State<DoctorsCategory> {
+class _RatingCategoryState extends State<RatingCategory> {
   List<bool> isSelectedList = List.generate(6, (index) => false);
 
   @override
@@ -23,15 +23,15 @@ class _DoctorsCategoryState extends State<DoctorsCategory> {
           children: [
             _buildCategoryContainer('All', 0),
             const SizedBox(width: 10,),
-            _buildCategoryContainer('General', 1),
+            _buildCategoryContainer('5', 1),
             const SizedBox(width: 10,),
-            _buildCategoryContainer('Dentist', 2),
+            _buildCategoryContainer('4', 2),
             const SizedBox(width: 10,),
-            _buildCategoryContainer('Ophthalmic', 3),
+            _buildCategoryContainer('3', 3),
             const SizedBox(width: 10,),
-            _buildCategoryContainer('Nutrition', 4),
+            _buildCategoryContainer('2', 4),
             const SizedBox(width: 10,),
-            _buildCategoryContainer('Neurology', 5),
+            _buildCategoryContainer('1', 5),
           ],
         ),
       ),
@@ -50,18 +50,33 @@ class _DoctorsCategoryState extends State<DoctorsCategory> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
           side: BorderSide(
-            color: isSelectedList[index] ? AppColors.primaryColors : AppColors.primaryColors,
+            color: isSelectedList[index] ? AppColors.primaryColors : AppColors
+                .primaryColors,
             width: 1.0,
           ),
         ),
-        backgroundColor: isSelectedList[index] ? AppColors.primaryColors : Colors.white,
-        label: Text(
-          label,
-          style: TextStyle(
-            fontWeight: FontWeight.w400,
-            fontSize: 15,
-            color: isSelectedList[index] ? Colors.white : AppColors.primaryColors,
-          ),
+        backgroundColor: isSelectedList[index]
+            ? AppColors.primaryColors
+            : Colors.white,
+        label: Row(
+          children: [
+            Icon(
+              Icons.star,
+              size: 15,
+              color: isSelectedList[index] ? Colors.white : AppColors
+                  .primaryColors,
+            ),
+            SizedBox(width: 5), // Adjust spacing between icon and text
+            Text(
+              label,
+              style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 15,
+                color: isSelectedList[index] ? Colors.white : AppColors
+                    .primaryColors,
+              ),
+            ),
+          ],
         ),
       ),
     );

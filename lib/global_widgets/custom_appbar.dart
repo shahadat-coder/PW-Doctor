@@ -5,9 +5,17 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
   final bool? isLeading;
   final List<Widget>? actions;
-  const CustomAppBar({super.key,  this.title,  this.isLeading,this.actions});
+  final ValueChanged<String>? onSearchTextChanged;
+
+  const CustomAppBar({
+    Key? key,
+    this.title,
+    this.isLeading,
+    this.actions,
+    this.onSearchTextChanged,
+  }) : super(key: key);
+
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
   @override
@@ -15,14 +23,30 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       backgroundColor: Colors.transparent,
       automaticallyImplyLeading: false,
-      leading: isLeading == true? IconButton(onPressed: (){
-        Get.back();
-      }, icon: const Icon(Icons.arrow_back,color: Colors.black,)) : null,
+      leading: isLeading == true
+          ? IconButton(
+        onPressed: () {
+          Get.back();
+        },
+        icon: const Icon(Icons.arrow_back, color: Colors.black),
+      )
+          : null,
       elevation: 0,
-      title: Text(title ?? '',
-        style: const TextStyle(
-          color: Colors.black,
-        ),
+      title: Row(
+        children: [
+          Expanded(
+            child: Text(
+              title ?? '',
+              style: const TextStyle(
+                color: Colors.black,
+              ),
+            ),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.search, color: Colors.black),
+          ),
+        ],
       ),
       actions: actions ?? [],
     );

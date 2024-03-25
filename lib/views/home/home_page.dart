@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/views/home/homeWidget/all_doctors_category.dart';
 import 'package:pw_doctor/views/home/homeWidget/carousel_slider.dart';
 import 'package:pw_doctor/views/home/homeWidget/home_appBar.dart';
@@ -39,7 +41,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: ItemCart(),
               ),
               SizedBox(height: 20,),
-              ArivableRow(title: 'Top Doctors'),
+              ArivableRow(title: 'Top Doctors',onTap: (){
+                Get.toNamed(RouteNames.topDoctor);
+              },),
               SizedBox(height: 20,),
               DoctorsCategory()
             ],

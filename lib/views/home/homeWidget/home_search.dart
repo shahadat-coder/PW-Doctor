@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pw_doctor/global_widgets/filter_bottomSheet.dart';
 import 'package:pw_doctor/utils/colors.dart';
 
 class HomeSearchField extends StatelessWidget {
@@ -13,7 +14,7 @@ class HomeSearchField extends StatelessWidget {
       padding: const EdgeInsets.all(15.0),
       child: TextField(
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.all(10),
+          contentPadding: const EdgeInsets.all(10),
           fillColor: Colors.grey[200],
           //filled: true
           prefixIcon:  Icon(
@@ -22,7 +23,8 @@ class HomeSearchField extends StatelessWidget {
           ),
           suffixIcon: Padding(
             padding: const EdgeInsets.all(12.0),
-            child: Image.asset('assets/images/filter.png',height: 10,width: 10,),
+            child: InkWell(onTap: (){
+            },child: Image.asset('assets/images/filter.png',height: 10,width: 10,)),
           ),
           hintText: 'Search',
           hintStyle: const TextStyle(color: Colors.grey,fontWeight: FontWeight.w400),

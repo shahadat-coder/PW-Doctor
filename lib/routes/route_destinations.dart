@@ -9,6 +9,7 @@ import 'package:pw_doctor/views/auth/fill_profile_screen.dart';
 import 'package:pw_doctor/views/bottom_nav.dart';
 import 'package:pw_doctor/views/forgot_pass/forgot_password.dart';
 import 'package:pw_doctor/views/forgot_pass/new_password/new_password.dart';
+import 'package:pw_doctor/views/home/homeWidget/top_doctor_screen.dart';
 import 'package:pw_doctor/views/home/home_page.dart';
 import 'package:pw_doctor/views/home/my_favourite_doctor_list.dart';
 import 'package:pw_doctor/views/home/notification_screen.dart';
@@ -77,6 +78,10 @@ class RouteDestinations{
     GetPage(
       name: RouteNames.favouriteDoctor,
       page: ()=> const MyFavouriteDoctorScreen(),
+    ),
+    GetPage(
+      name: RouteNames.topDoctor,
+      page: ()=> const TopDoctorScreen(),
     ),
   ];
 }
