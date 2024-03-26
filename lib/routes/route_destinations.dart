@@ -1,4 +1,5 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
+import 'package:pw_doctor/models/top_doctor_model.dart';
 import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/views/auth/finger_screen.dart';
 import 'package:pw_doctor/views/auth/login_screen.dart';
@@ -7,9 +8,10 @@ import 'package:pw_doctor/views/auth/pin_screen.dart';
 import 'package:pw_doctor/views/auth/signup_screen.dart';
 import 'package:pw_doctor/views/auth/fill_profile_screen.dart';
 import 'package:pw_doctor/views/bottom_nav.dart';
+import 'package:pw_doctor/views/doctor_appoinment_booking/book_appointment_doctor.dart';
 import 'package:pw_doctor/views/forgot_pass/forgot_password.dart';
 import 'package:pw_doctor/views/forgot_pass/new_password/new_password.dart';
-import 'package:pw_doctor/views/home/homeWidget/top_doctor_screen.dart';
+import 'package:pw_doctor/views/home/top_doctor/top_doctor_screen.dart';
 import 'package:pw_doctor/views/home/home_page.dart';
 import 'package:pw_doctor/views/home/my_favourite_doctor_list.dart';
 import 'package:pw_doctor/views/home/notification_screen.dart';
@@ -83,5 +85,10 @@ class RouteDestinations{
       name: RouteNames.topDoctor,
       page: ()=> const TopDoctorScreen(),
     ),
+    GetPage(
+      name: RouteNames.bookDoctor,
+      page: ()=>  BookDoctorScreen(),
+    ),
   ];
+
 }

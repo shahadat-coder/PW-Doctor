@@ -66,7 +66,7 @@ class _RatingCategoryState extends State<RatingCategory> {
               color: isSelectedList[index] ? Colors.white : AppColors
                   .primaryColors,
             ),
-            SizedBox(width: 5), // Adjust spacing between icon and text
+            const SizedBox(width: 5), // Adjust spacing between icon and text
             Text(
               label,
               style: TextStyle(

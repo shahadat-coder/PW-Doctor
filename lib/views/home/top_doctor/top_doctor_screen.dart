@@ -7,6 +7,8 @@ import 'package:pw_doctor/utils/colors.dart';
 import 'package:pw_doctor/views/home/homeWidget/all_doctors_category.dart';
 import 'package:pw_doctor/views/home/homeWidget/home_search.dart';
 
+import '../../../routes/route_names.dart';
+
 class TopDoctorScreen extends StatefulWidget {
   const TopDoctorScreen({Key? key}) : super(key: key);
 
@@ -75,7 +77,9 @@ class _TopDoctorScreenState extends State<TopDoctorScreen> {
                 const SizedBox(height: 20), // Add gap between items
                 itemBuilder: (context, index) {
                   return InkWell(
-                    onTap: () {},
+                    onTap: () {
+                        Get.toNamed(RouteNames.bookDoctor);
+                    }, 
                     child: Card(
                       elevation: 0,
                       semanticContainer: true,

@@ -28,7 +28,7 @@ class ArivableRow extends StatelessWidget {
                 style: const TextStyle(
                   wordSpacing: 0.15,
                   fontWeight: FontWeight.w500,
-                  fontSize: 20,
+                  fontSize: 17,
                   color: Colors.black,
                 ),
               ),

@@ -14,12 +14,12 @@ class _NotificationScreenState extends State<NotificationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: const CustomAppBar(
         isLeading: true,
         title: 'Notification',
         actions: [
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(8.0),
             child: Icon(Icons.pending_outlined),
           )
         ],
@@ -73,7 +73,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                     ),
                   ],
                 ),
-                SizedBox(width: 80),
+                const SizedBox(width: 80),
                 if (isFirstOrSecond) // Conditionally add chip for first two items
                   Chip(
                     label: const Text(
@@ -81,7 +81,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                       style: TextStyle(color: Colors.white, fontSize: 12),
                     ),
                     shape: RoundedRectangleBorder(
-                      side: BorderSide(
+                      side: const BorderSide(
                         color: AppColors.primaryColors,
                         width: 1.0,
                       ),
@@ -89,7 +89,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                     ),
                     backgroundColor: AppColors.primaryColors,
                   ),
-                SizedBox(height: 60)
+                const SizedBox(height: 60)
               ],
             ),
             subtitle: Text(
