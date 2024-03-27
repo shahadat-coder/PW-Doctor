@@ -1,5 +1,4 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
-import 'package:pw_doctor/models/top_doctor_model.dart';
 import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/views/auth/finger_screen.dart';
 import 'package:pw_doctor/views/auth/login_screen.dart';
