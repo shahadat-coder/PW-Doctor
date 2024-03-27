@@ -15,7 +15,7 @@ class _ReviewScreenState extends State<ReviewScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: const CustomAppBar(
         isLeading: true,
         title: '4.8 (4,942 reviews)',
         actions: [
@@ -25,9 +25,9 @@ class _ReviewScreenState extends State<ReviewScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(height: 20,),
-            RatingCategory(),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
+            const RatingCategory(),
+            const SizedBox(height: 20,),
             Expanded(child: ListView.builder(
               itemCount: review.length,
               itemBuilder: (context, index) {
@@ -52,18 +52,18 @@ class _ReviewScreenState extends State<ReviewScreen> {
                           color: Colors.black,
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Container(
                         height: 30,
                         width: 50,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          borderRadius: const BorderRadius.all(Radius.circular(20)),
                           border: Border.all(
                             color: AppColors.primaryColors,
                             width: 2.0,
                           ),
                         ),
-                        child: Center(
+                        child: const Center(
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
@@ -72,7 +72,7 @@ class _ReviewScreenState extends State<ReviewScreen> {
                                 size: 14,
                                 color: AppColors.primaryColors,
                               ),
-                              const SizedBox(width: 2), // Adjust spacing between icon and text
+                              SizedBox(width: 2), // Adjust spacing between icon and text
                               Text(
                                 "5",
                                 style: TextStyle(
@@ -85,8 +85,8 @@ class _ReviewScreenState extends State<ReviewScreen> {
                           ),
                         ),
                       ),
-                      SizedBox(width: 10,),
-                      Icon(Icons.pending_outlined,size: 20,),
+                      const SizedBox(width: 10,),
+                      const Icon(Icons.pending_outlined,size: 20,),
                     ],
                   ),
                   subtitle: Column(
@@ -99,8 +99,8 @@ class _ReviewScreenState extends State<ReviewScreen> {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      SizedBox(height: 15,),
-                      Row(
+                      const SizedBox(height: 15,),
+                      const Row(
                         children: [
                           Icon(Icons.favorite_border,
                               color: AppColors.primaryColors, size: 15),
