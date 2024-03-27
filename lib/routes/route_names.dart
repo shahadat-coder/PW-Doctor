@@ -16,4 +16,5 @@ class RouteNames{
   static const String favouriteDoctor = '/favouriteDoctor';
   static const String topDoctor = '/topDoctor';
   static const String bookDoctor = '/bookDoctor';
+  static const String reviewScreen = '/reviewScreen';
 }

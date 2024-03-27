@@ -9,6 +9,7 @@ import 'package:pw_doctor/views/auth/signup_screen.dart';
 import 'package:pw_doctor/views/auth/fill_profile_screen.dart';
 import 'package:pw_doctor/views/bottom_nav.dart';
 import 'package:pw_doctor/views/doctor_appoinment_booking/book_appointment_doctor.dart';
+import 'package:pw_doctor/views/doctor_appoinment_booking/widget/review_screen.dart';
 import 'package:pw_doctor/views/forgot_pass/forgot_password.dart';
 import 'package:pw_doctor/views/forgot_pass/new_password/new_password.dart';
 import 'package:pw_doctor/views/home/top_doctor/top_doctor_screen.dart';
@@ -87,7 +88,11 @@ class RouteDestinations{
     ),
     GetPage(
       name: RouteNames.bookDoctor,
-      page: ()=>  BookDoctorScreen(),
+      page: ()=>  const BookDoctorScreen(),
+    ),
+    GetPage(
+      name: RouteNames.reviewScreen,
+      page: ()=>  const ReviewScreen(),
     ),
   ];
 

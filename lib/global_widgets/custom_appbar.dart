@@ -32,21 +32,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       )
           : null,
       elevation: 0,
-      title: Row(
-        children: [
-          Expanded(
-            child: Text(
-              title ?? '',
-              style: const TextStyle(
-                color: Colors.black,
-              ),
-            ),
+      title: Expanded(
+        child: Text(
+          title ?? '',
+          style: const TextStyle(
+            color: Colors.black,
           ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.search, color: Colors.black),
-          ),
-        ],
+        ),
       ),
       actions: actions ?? [],
     );
