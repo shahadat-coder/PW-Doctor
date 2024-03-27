@@ -11,14 +11,14 @@ import 'package:pw_doctor/views/home/homeWidget/see_all_row.dart';
 import 'widget/card_widget.dart';
 import 'widget/item_row.dart';
 
-class BookDoctorScreen extends StatefulWidget {
-  const BookDoctorScreen({Key? key}) : super(key: key);
+class DoctorProfileScreen extends StatefulWidget {
+  const DoctorProfileScreen({Key? key}) : super(key: key);
 
   @override
-  State<BookDoctorScreen> createState() => _BookDoctorScreenState();
+  State<DoctorProfileScreen> createState() => _DoctorProfileScreenState();
 }
 
-class _BookDoctorScreenState extends State<BookDoctorScreen> {
+class _DoctorProfileScreenState extends State<DoctorProfileScreen> {
   bool _showMore = false;
 
   @override
@@ -40,19 +40,19 @@ class _BookDoctorScreenState extends State<BookDoctorScreen> {
         ],
       ),
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 20),
-            const CardWidget(),
-            const SizedBox(height: 20),
-            const SizedBox(
-              height: 110,
-              child: ItemCircleRow(),
-            ),
-            const SizedBox(height: 15),
-            SingleChildScrollView(
-              child: Padding(
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(height: 20),
+              const CardWidget(),
+              const SizedBox(height: 20),
+              const SizedBox(
+                height: 110,
+                child: ItemCircleRow(),
+              ),
+              const SizedBox(height: 15),
+              Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -214,12 +214,14 @@ class _BookDoctorScreenState extends State<BookDoctorScreen> {
                   ],
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            CustomButton(title: 'Book Appointment', onTap: () {})
-          ],
+              const SizedBox(
+                height: 20,
+              ),
+              CustomButton(title: 'Book Appointment', onTap: () {
+                Get.toNamed(RouteNames.bookAppointment);
+              })
+            ],
+          ),
         ),
       ),
     );

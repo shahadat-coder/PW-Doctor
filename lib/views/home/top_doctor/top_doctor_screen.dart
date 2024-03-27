@@ -78,7 +78,7 @@ class _TopDoctorScreenState extends State<TopDoctorScreen> {
                 itemBuilder: (context, index) {
                   return InkWell(
                     onTap: () {
-                        Get.toNamed(RouteNames.bookDoctor);
+                        Get.toNamed(RouteNames.doctorProfile);
                     }, 
                     child: Card(
                       elevation: 0,

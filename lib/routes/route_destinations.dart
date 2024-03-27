@@ -8,7 +8,8 @@ import 'package:pw_doctor/views/auth/pin_screen.dart';
 import 'package:pw_doctor/views/auth/signup_screen.dart';
 import 'package:pw_doctor/views/auth/fill_profile_screen.dart';
 import 'package:pw_doctor/views/bottom_nav.dart';
-import 'package:pw_doctor/views/doctor_appoinment_booking/book_appointment_doctor.dart';
+import 'package:pw_doctor/views/doctor_appoinment_booking/book_appoinment.dart';
+import 'package:pw_doctor/views/doctor_appoinment_booking/doctor_profile.dart';
 import 'package:pw_doctor/views/doctor_appoinment_booking/widget/review_screen.dart';
 import 'package:pw_doctor/views/forgot_pass/forgot_password.dart';
 import 'package:pw_doctor/views/forgot_pass/new_password/new_password.dart';
@@ -87,12 +88,16 @@ class RouteDestinations{
       page: ()=> const TopDoctorScreen(),
     ),
     GetPage(
-      name: RouteNames.bookDoctor,
-      page: ()=>  const BookDoctorScreen(),
+      name: RouteNames.doctorProfile,
+      page: ()=>  const DoctorProfileScreen(),
     ),
     GetPage(
       name: RouteNames.reviewScreen,
       page: ()=>  const ReviewScreen(),
+    ),
+    GetPage(
+      name: RouteNames.bookAppointment,
+      page: ()=>  const BookAppointmentScreen(),
     ),
   ];
 
