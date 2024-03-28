@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:pw_doctor/global_widgets/custom_appbar.dart';
 import 'package:pw_doctor/global_widgets/custom_button.dart';
+import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/utils/colors.dart';
 import 'package:pw_doctor/views/doctor_appoinment_booking/widget/time_widget.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -61,7 +64,9 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
               ),
               const Center(child: TimeSelected()),
               const SizedBox(height: 20,),
-              CustomButton(title: 'Next', onTap: (){})
+              CustomButton(title: 'Next', onTap: (){
+                Get.toNamed(RouteNames.selectPakage);
+              })
             ],
           ),
         ),
