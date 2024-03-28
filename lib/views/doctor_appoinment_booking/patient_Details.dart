@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pw_doctor/global_widgets/custom_appbar.dart';
 import 'package:pw_doctor/global_widgets/custom_button.dart';
 import 'package:pw_doctor/global_widgets/custom_textfield.dart';
+import 'package:pw_doctor/routes/route_names.dart';
 
 class PatientDetailsScreen extends StatefulWidget {
   const PatientDetailsScreen({Key? key}) : super(key: key);
@@ -102,7 +104,9 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
               hintColor: Colors.black45,
             ),
             const Spacer(),
-            CustomButton(title: 'Next', onTap: (){}),
+            CustomButton(title: 'Next', onTap: (){
+              Get.toNamed(RouteNames.paymentsScreen);
+            }),
           ],
         ),
       ),

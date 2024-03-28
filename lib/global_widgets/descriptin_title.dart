@@ -14,6 +14,7 @@ class DescribeText extends StatelessWidget {
       style: TextStyle(
         color: color,
         fontSize: 15,
+        fontWeight: FontWeight.bold
       ),
     );
   }

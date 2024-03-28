@@ -3,9 +3,9 @@ import 'package:pw_doctor/global_widgets/descriptin_title.dart';
 import 'package:pw_doctor/utils/colors.dart';
 
 class CodeContainer extends StatefulWidget {
-  const CodeContainer({Key? key,required this.title, required this.subtitle, required this.assetImage, this.icon, this.backgroundColor,this.money, this.sub});
+  const CodeContainer({Key? key,required this.title,this.subtitle, required this.assetImage, this.icon, this.backgroundColor,this.money, this.sub});
   final String title;
-  final String subtitle;
+  final String? subtitle;
   final String? sub;
   final String? money;
   final Image assetImage;
@@ -44,10 +44,11 @@ class _CodeContainerState extends State<CodeContainer> {
               const SizedBox(width: 15,),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   DescribeText(title: widget.title ),
                   Text(
-                    widget.subtitle,
+                    widget.subtitle != null ? widget.subtitle! : "",
                     style: const TextStyle(
                         fontWeight: FontWeight.w400,
                         fontSize: 12,
