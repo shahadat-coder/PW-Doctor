@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pw_doctor/global_widgets/code_container.dart';
 import 'package:pw_doctor/global_widgets/custom_appbar.dart';
 import 'package:pw_doctor/global_widgets/custom_button.dart';
 import 'package:pw_doctor/global_widgets/custom_textfield.dart';
+import 'package:pw_doctor/routes/route_names.dart';
 
 
 class SelectPackageScreen extends StatefulWidget {
@@ -42,11 +44,12 @@ class _SelectPackageScreenState extends State<SelectPackageScreen> {
               ),
               SizedBox(height: 15,),
               TextFieldWidget(
+                fillColor: Colors.grey.shade50,
                 controller: timeController,
                 prefixIcon: Icons.watch_later,
                 prefixIconColor: Colors.black87,
                 hintText: 'Time',
-                hintColor: Colors.black,
+                hintColor: Colors.black45,
                 suffixIcon: Icons.arrow_drop_down_sharp,
                 suffixIconColor: Colors.black87,
               ),
@@ -120,8 +123,10 @@ class _SelectPackageScreenState extends State<SelectPackageScreen> {
                   ),
                 ),
               ),
-              Spacer(),
-              CustomButton(title: 'Container', onTap: (){})
+              const Spacer(),
+              CustomButton(title: 'Next', onTap: (){
+                Get.toNamed(RouteNames.patientDetails);
+              })
             ]
         ),
       ),

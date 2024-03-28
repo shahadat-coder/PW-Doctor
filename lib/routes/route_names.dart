@@ -19,4 +19,5 @@ class RouteNames{
   static const String reviewScreen = '/reviewScreen';
   static const String bookAppointment = '/bookAppointment';
   static const String selectPakage = '/selectPakage';
+  static const String patientDetails = '/patientDetails';
 }
