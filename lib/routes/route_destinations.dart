@@ -10,6 +10,7 @@ import 'package:pw_doctor/views/bottom_nav.dart';
 import 'package:pw_doctor/views/doctor_appoinment_booking/add_Card.dart';
 import 'package:pw_doctor/views/doctor_appoinment_booking/book_appoinment.dart';
 import 'package:pw_doctor/views/doctor_appoinment_booking/doctor_profile.dart';
+import 'package:pw_doctor/views/doctor_appoinment_booking/enter_your_pin.dart';
 import 'package:pw_doctor/views/doctor_appoinment_booking/patient_Details.dart';
 import 'package:pw_doctor/views/doctor_appoinment_booking/pyments_screen.dart';
 import 'package:pw_doctor/views/doctor_appoinment_booking/review_summary.dart';
@@ -122,6 +123,10 @@ class RouteDestinations{
     GetPage(
       name: RouteNames.reviewSummary,
       page: ()=>  const ReviewSummaryScreen(),
+    ),
+    GetPage(
+      name: RouteNames.enterPin,
+      page: ()=>  const EnterYourPinScreen(),
     ),
   ];
 

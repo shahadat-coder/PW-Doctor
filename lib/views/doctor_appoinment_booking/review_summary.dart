@@ -1,10 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pw_doctor/global_widgets/custom_appbar.dart';
 import 'package:pw_doctor/global_widgets/custom_button.dart';
+import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/utils/colors.dart';
 import 'package:pw_doctor/views/doctor_appoinment_booking/widget/card_widget.dart';
-
 import 'widget/review_summary_widget/contract_card.dart';
 import 'widget/review_summary_widget/package_card.dart';
 
@@ -75,7 +76,9 @@ class _ReviewSummaryScreenState extends State<ReviewSummaryScreen> {
             ),
           ),
           const Spacer(),
-             CustomButton(title: 'Next', onTap: (){}),
+             CustomButton(title: 'Next', onTap: (){
+             Get.toNamed(RouteNames.enterPin);
+             }),
           const SizedBox(height: 15,)
         ],
       ),
