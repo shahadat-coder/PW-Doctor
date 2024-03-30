@@ -21,4 +21,6 @@ class RouteNames{
   static const String selectPakage = '/selectPakage';
   static const String patientDetails = '/patientDetails';
   static const String paymentsScreen = '/paymentsScreen';
+  static const String addCard = '/addCard';
+  static const String reviewSummary = '/reviewSummary';
 }

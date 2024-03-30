@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pw_doctor/global_widgets/code_container.dart';
 import 'package:pw_doctor/global_widgets/custom_appbar.dart';
 import 'package:pw_doctor/global_widgets/custom_button.dart';
 import 'package:pw_doctor/global_widgets/custom_text.dart';
+import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/utils/colors.dart';
 
 class PaymentScreen extends StatefulWidget {
@@ -88,9 +90,13 @@ class _PaymentScreenState extends State<PaymentScreen> {
               ),
             ),
             const SizedBox(height: 20,),
-            CustomButton(title: 'Add New Card',titleColor: AppColors.primaryColors, onTap: (){},backgroundColor: AppColors.primaryColors.withOpacity(0.1),),
+            CustomButton(title: 'Add New Card',titleColor: AppColors.primaryColors, onTap: (){
+              Get.toNamed(RouteNames.addCard);
+            },backgroundColor: AppColors.primaryColors.withOpacity(0.1),),
             const Spacer(),
-            CustomButton(title: 'Next', onTap: (){}),
+            CustomButton(title: 'Next', onTap: (){
+              Get.toNamed(RouteNames.reviewSummary);
+            }),
             const SizedBox(height: 15,),
           ],
         ),
