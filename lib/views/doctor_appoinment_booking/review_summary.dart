@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pw_doctor/global_widgets/custom_appbar.dart';
 import 'package:pw_doctor/global_widgets/custom_button.dart';
-import 'package:pw_doctor/global_widgets/custom_text.dart';
 import 'package:pw_doctor/utils/colors.dart';
 import 'package:pw_doctor/views/doctor_appoinment_booking/widget/card_widget.dart';
 
