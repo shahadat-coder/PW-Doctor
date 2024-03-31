@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pw_doctor/utils/colors.dart';
 import 'package:pw_doctor/views/home/home_page.dart';
+import 'package:pw_doctor/views/my_appoinments/my_appoinments.dart';
 
 class BottomNavBaseScreen extends StatefulWidget {
   const BottomNavBaseScreen({Key? key}) : super(key: key);
@@ -14,6 +15,7 @@ class _BottomNavBaseScreenState extends State<BottomNavBaseScreen> {
 
   final List<Widget> _screens = const [
     HomeScreen(),
+    MyAppoinmentScreen(),
   ];
 
   @override
