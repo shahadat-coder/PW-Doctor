@@ -2,7 +2,6 @@ import 'package:contained_tab_bar_view_with_custom_page_navigator/contained_tab_
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pw_doctor/global_widgets/custom_appbar.dart';
-import 'package:pw_doctor/utils/colors.dart';
 import 'package:pw_doctor/views/my_appoinments/cancel_screen.dart';
 import 'package:pw_doctor/views/my_appoinments/completed_screen.dart';
 import 'package:pw_doctor/views/my_appoinments/upcoming_screen.dart';
