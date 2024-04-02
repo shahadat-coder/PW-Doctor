@@ -22,6 +22,7 @@ import 'package:pw_doctor/views/home/top_doctor/top_doctor_screen.dart';
 import 'package:pw_doctor/views/home/home_page.dart';
 import 'package:pw_doctor/views/home/my_favourite_doctor_list.dart';
 import 'package:pw_doctor/views/home/notification_screen.dart';
+import 'package:pw_doctor/views/my_appoinments/Reschedule_screen.dart';
 import 'package:pw_doctor/views/onboardings/onboarding_screen.dart';
 import 'package:pw_doctor/views/otp_verification/otp_verification.dart';
 import 'package:pw_doctor/views/splash_screen.dart';
@@ -128,6 +129,11 @@ class RouteDestinations{
       name: RouteNames.enterPin,
       page: ()=>  const EnterYourPinScreen(),
     ),
+    GetPage(
+      name: RouteNames.reschedule,
+      page: ()=>  const RescheduleScreen(),
+    ),
+
   ];
 
 }

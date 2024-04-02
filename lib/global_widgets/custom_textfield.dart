@@ -6,7 +6,7 @@ class TextFieldWidget extends StatefulWidget {
   final Color? prefixIconColor;
   final IconData? suffixIcon;
   final Color? suffixIconColor;
-  final String hintText;
+  final String? hintText;
   final Color hintColor;
   final bool obscureText;
   final TextInputType keyboardType;
@@ -20,7 +20,7 @@ class TextFieldWidget extends StatefulWidget {
     this.prefixIconColor,
     this.suffixIcon,
     this.suffixIconColor,
-    required this.hintText,
+    this.hintText,
     required this.hintColor,
     this.obscureText = false,
     this.keyboardType = TextInputType.text,

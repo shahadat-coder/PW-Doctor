@@ -24,4 +24,5 @@ class RouteNames{
   static const String addCard = '/addCard';
   static const String reviewSummary = '/reviewSummary';
   static const String enterPin = '/enterPin';
+  static const String reschedule = '/reschedule';
 }

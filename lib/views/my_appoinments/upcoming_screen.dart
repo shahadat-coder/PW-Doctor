@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pw_doctor/models/fav_doctor_model.dart';
 import 'package:pw_doctor/models/my_appoinment_model/upcoming_model.dart';
+import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/utils/colors.dart';
 
 import 'widgets/choose_button.dart';
@@ -110,7 +112,9 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
                               ChooseButton(title: 'Reschedule',
                                   titleColor: AppColors.thirdColors,
                                   backgroundColor: AppColors.primaryColors,
-                                  onTap: (){}),
+                                  onTap: (){
+                                Get.toNamed(RouteNames.reschedule);
+                                  }),
                             ],
                           )
                         ],
