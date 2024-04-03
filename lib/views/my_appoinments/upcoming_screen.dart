@@ -4,6 +4,7 @@ import 'package:pw_doctor/models/fav_doctor_model.dart';
 import 'package:pw_doctor/models/my_appoinment_model/upcoming_model.dart';
 import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/utils/colors.dart';
+import 'package:pw_doctor/views/my_appoinments/widgets/cancel_buttonsheet.dart';
 
 import 'widgets/choose_button.dart';
 
@@ -49,7 +50,7 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
                         ),
                       ),
                     ),
-                    SizedBox(width: 10,),
+                    const SizedBox(width: 10,),
                     Padding(
                       padding: const EdgeInsets.only(top: 20,bottom: 20),
                       child: Column(
@@ -70,7 +71,7 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
                           const SizedBox(height: 8,),
                            Row(
                              children: [
-                               Text('${upcomingData[index].communicate}',style: TextStyle(
+                               Text('${upcomingData[index].communicate}',style: const TextStyle(
                                  fontSize: 13,
                                  color: Colors.black54,
                                  fontWeight: FontWeight.w800
@@ -89,26 +90,33 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
                                  ),
                                  backgroundColor: AppColors.thirdColors,
                                ),
-                               SizedBox(width: 15,),
+                               const SizedBox(width: 15,),
                                Image.asset('${upcomingData[index].AssetImage}',height: 55,width: 55,),
                              ],
                            ),
                           Text(
                             '${upcomingData[index].date}',
-                            style:  TextStyle(
+                            style:  const TextStyle(
                               color: Colors.black54,
                               fontSize: 12
                             ),
                           ),
-                          SizedBox(height: 20,),
+                          const SizedBox(height: 20,),
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               ChooseButton(title: 'Cancel This',
                                   titleColor: AppColors.primaryColors,
                                    borderColor: AppColors.primaryColors,
-                                  onTap: (){}),
-                              SizedBox(width: 15,),
+                                  onTap: (){
+                                    showModalBottomSheet(
+                                      context: context,
+                                      builder: (BuildContext context) {
+                                        return const CancelButtonsheetWidget();
+                                      },
+                                    );
+                                  }),
+                              const SizedBox(width: 15,),
                               ChooseButton(title: 'Reschedule',
                                   titleColor: AppColors.thirdColors,
                                   backgroundColor: AppColors.primaryColors,

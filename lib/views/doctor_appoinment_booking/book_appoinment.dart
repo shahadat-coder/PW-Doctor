@@ -63,10 +63,11 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
                 ),
               ),
               const Center(child: TimeSelected()),
-              const SizedBox(height: 20,),
+              const Spacer(),
               CustomButton(title: 'Next', onTap: (){
                 Get.toNamed(RouteNames.selectPakage);
-              })
+              }),
+              const SizedBox(height: 10,),
             ],
           ),
         ),

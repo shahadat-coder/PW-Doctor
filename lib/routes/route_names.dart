@@ -25,4 +25,6 @@ class RouteNames{
   static const String reviewSummary = '/reviewSummary';
   static const String enterPin = '/enterPin';
   static const String reschedule = '/reschedule';
+  static const String scheduleTime = '/scheduleTime';
+  static const String cancelSchedule = '/cancelSchedule';
 }

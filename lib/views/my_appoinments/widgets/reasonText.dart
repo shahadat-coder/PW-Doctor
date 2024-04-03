@@ -5,44 +5,41 @@ class ReasonText extends StatefulWidget {
     Key? key,
     required this.title,
     required this.value,
+    required this.groupValue,
+    required this.onChanged,
   }) : super(key: key);
 
   final String title;
   final int value;
+  final int groupValue;
+  final ValueChanged<int>? onChanged;
 
   @override
   _ReasonTextState createState() => _ReasonTextState();
 }
 
 class _ReasonTextState extends State<ReasonText> {
-  late int _groupValue;
-
-  @override
-  void initState() {
-    super.initState();
-    _groupValue = widget.value; // Initialize groupValue with the widget's value
-  }
-
   @override
   Widget build(BuildContext context) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Radio(
+        Radio<int>(
           value: widget.value,
-          groupValue: _groupValue,
+          groupValue: widget.groupValue,
           onChanged: (value) {
-            setState(() {
-              _groupValue = value as int;
-            });
+            widget.onChanged?.call(value!);
           },
         ),
-        Text(
-          widget.title,
-          style: TextStyle(
-            fontSize: 15,
-            fontWeight: FontWeight.w400,
-            color: Colors.black87,
+        Padding(
+          padding: const EdgeInsets.only(top: 10),
+          child: Text(
+            widget.title,
+            style: const TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.w400,
+              color: Colors.black87,
+            ),
           ),
         ),
       ],
