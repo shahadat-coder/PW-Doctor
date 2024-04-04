@@ -3,7 +3,6 @@ import 'package:pw_doctor/global_widgets/code_container.dart';
 import 'package:pw_doctor/global_widgets/custom_appbar.dart';
 import 'package:pw_doctor/global_widgets/custom_button.dart';
 import 'package:pw_doctor/global_widgets/custom_text.dart';
-import 'package:pw_doctor/global_widgets/descriptin_title.dart';
 import 'package:pw_doctor/views/doctor_appoinment_booking/widget/card_widget.dart';
 
 class DoctorDetails extends StatefulWidget {
