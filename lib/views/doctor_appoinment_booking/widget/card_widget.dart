@@ -3,8 +3,17 @@ import 'package:pw_doctor/utils/colors.dart';
 
 class CardWidget extends StatelessWidget {
   const CardWidget({
-    super.key,
-  });
+    Key? key,
+    this.name,
+    this.image,
+    this.trade,
+    this.hospital,
+  }) : super(key: key);
+
+  final String? name;
+  final String? image;
+  final String? trade;
+  final String? hospital;
 
   @override
   Widget build(BuildContext context) {
@@ -28,12 +37,12 @@ class CardWidget extends StatelessWidget {
                 width: 100,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  image: DecorationImage(
+                  image: image != null
+                      ? DecorationImage(
                     fit: BoxFit.cover,
-                    image: NetworkImage(
-                      'https://t3.ftcdn.net/jpg/05/04/25/70/360_F_504257032_jBtwqNdvdMN9Xm6aDT0hcvtxDXPZErrn.jpg',
-                    ),
-                  ),
+                    image: NetworkImage(image!),
+                  )
+                      : null,
                 ),
               ),
             ),
@@ -42,47 +51,45 @@ class CardWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Row(
-                  children: [
-                    Text(
-                      ('Dr. Jenny Watson'),
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
-                        wordSpacing: 0.15,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 17,
-                        color: Colors.black,
+                if (name != null) ...[
+                  Row(
+                    children: [
+                      Text(
+                        name!,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          wordSpacing: 0.15,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 17,
+                          color: Colors.black,
+                        ),
                       ),
-                    ),
-                    const SizedBox(width: 100),
-                    const Icon(
-                      Icons.favorite,
-                      color: AppColors.primaryColors,
-                    )
-                  ],
-                ),
-                const SizedBox(height: 15),
-                Container(
-                  width: MediaQuery
-                      .of(context)
-                      .size
-                      .width -
-                      140, // Adjust width as needed
-                  child: Divider(
-                    color: Colors.grey.withOpacity(0.3),
-                    height: 2,
+                      const SizedBox(width: 100),
+                      const Icon(
+                        Icons.favorite,
+                        color: AppColors.primaryColors,
+                      )
+                    ],
                   ),
-                ),
-                const SizedBox(height: 15),
+                  const SizedBox(height: 15),
+                  Container(
+                    width: MediaQuery.of(context).size.width - 140,
+                    child: Divider(
+                      color: Colors.grey.withOpacity(0.3),
+                      height: 2,
+                    ),
+                  ),
+                  const SizedBox(height: 15),
+                ],
                 Text(
-                  'Immunologists',
+                  trade ?? '', // Use null-aware operator to handle null trade
                   style: const TextStyle(
                     color: Colors.black45,
                   ),
                 ),
                 const SizedBox(height: 10),
-                const Row(
+                Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -93,7 +100,7 @@ class CardWidget extends StatelessWidget {
                     ),
                     SizedBox(width: 5),
                     Text(
-                      'Christ Hospital in London, UK',
+                      hospital ?? '',
                       style: TextStyle(
                         color: Colors.black45,
                       ),
