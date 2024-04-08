@@ -12,7 +12,8 @@ class TextFieldWidget extends StatefulWidget {
   final TextInputType keyboardType;
   final TextEditingController? controller;
   final Color? fillColor;
-  final int? maxLines; // New parameter for maxLines
+  final int? maxLines;// New parameter for maxLines
+   // New parameter for maxLines
 
   TextFieldWidget({
     Key? key,

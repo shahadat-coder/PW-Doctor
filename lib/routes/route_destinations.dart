@@ -26,6 +26,7 @@ import 'package:pw_doctor/views/my_appoinments/Reschedule_screen.dart';
 import 'package:pw_doctor/views/my_appoinments/_schedule_time.dart';
 import 'package:pw_doctor/views/my_appoinments/cancel_appoinment.dart';
 import 'package:pw_doctor/views/my_appoinments/doctor_details.dart';
+import 'package:pw_doctor/views/my_appoinments/message/message_screen.dart';
 import 'package:pw_doctor/views/onboardings/onboarding_screen.dart';
 import 'package:pw_doctor/views/otp_verification/otp_verification.dart';
 import 'package:pw_doctor/views/splash_screen.dart';
@@ -147,6 +148,10 @@ class RouteDestinations{
     GetPage(
       name: RouteNames.doctorDetail,
       page: ()=>  const DoctorDetails(),
+    ),
+    GetPage(
+      name: RouteNames.messageScreen,
+      page: ()=>  const MessageScreen(),
     ),
 
   ];

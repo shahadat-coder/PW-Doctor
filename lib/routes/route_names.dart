@@ -28,4 +28,5 @@ class RouteNames{
   static const String scheduleTime = '/scheduleTime';
   static const String cancelSchedule = '/cancelSchedule';
   static const String doctorDetail = '/doctorDetail';
+  static const String messageScreen = '/messageScreen';
 }

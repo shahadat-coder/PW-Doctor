@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:pw_doctor/global_widgets/code_container.dart';
 import 'package:pw_doctor/global_widgets/custom_appbar.dart';
 import 'package:pw_doctor/global_widgets/custom_button.dart';
 import 'package:pw_doctor/global_widgets/custom_text.dart';
+import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/views/doctor_appoinment_booking/widget/card_widget.dart';
 
 class DoctorDetails extends StatefulWidget {
@@ -33,7 +35,7 @@ class _DoctorDetailsState extends State<DoctorDetails> {
           const SizedBox(height: 15,),
           const CardWidget(
             image: 'https://media.istockphoto.com/id/1470505351/photo/portrait-of-a-smiling-doctor-holding-glasses-and-a-mobile-phone-at-the-office.webp?b=1&s=170667a&w=0&k=20&c=8CebFLF4PFnt9JYJznGhYoOQxcyHLVpTGVfkvEsZd2Q=',
-            name: 'Dr. Raul Zirkind',
+            name: 'Dr. Travis Westaby',
             trade: 'Immunologists',
             hospital: 'The Volley Hospital in California US',
           ),
@@ -118,7 +120,9 @@ class _DoctorDetailsState extends State<DoctorDetails> {
              ),
            ),
           const Spacer(),
-          CustomButton(title: 'Message', onTap: (){}),
+          CustomButton(title: 'Message', onTap: (){
+            Get.toNamed(RouteNames.messageScreen);
+          }),
           const SizedBox(height: 10,),
         ],
       ),
