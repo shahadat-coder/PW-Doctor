@@ -1,13 +1,8 @@
-import 'dart:io';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:pw_doctor/global_widgets/custom_appbar.dart';
 import 'package:pw_doctor/utils/colors.dart';
 import 'package:pw_doctor/views/my_appoinments/message/camera.dart';
-
-import '../../../global_widgets/custom_textfield.dart';
 
 class MessageScreen extends StatefulWidget {
   const MessageScreen({super.key});

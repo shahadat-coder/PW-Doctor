@@ -12,7 +12,6 @@ class Camera extends StatefulWidget {
 class _CameraState extends State<Camera> {
 
   File? _image;
-
   final ImagePicker imagePicker = ImagePicker();
 
   Future getImage() async {
