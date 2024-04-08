@@ -1,7 +1,11 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:pw_doctor/global_widgets/custom_appbar.dart';
 import 'package:pw_doctor/utils/colors.dart';
+import 'package:pw_doctor/views/my_appoinments/message/camera.dart';
 
 import '../../../global_widgets/custom_textfield.dart';
 
@@ -13,6 +17,8 @@ class MessageScreen extends StatefulWidget {
 }
 
 class _MessageScreenState extends State<MessageScreen> {
+
+
   List<Map> chatDetails = [
     {
       'message' : 'Hi, good afternoon Dr. Travis',
@@ -68,6 +74,9 @@ class _MessageScreenState extends State<MessageScreen> {
                      Column(
                        mainAxisSize: MainAxisSize.min,
                        children: [
+                         Text(data['time'],style: TextStyle(
+                           fontSize: 12
+                         ),),
                          Container(
                            margin: EdgeInsets.symmetric(vertical: 7),
                            padding: EdgeInsets.symmetric(
@@ -90,7 +99,6 @@ class _MessageScreenState extends State<MessageScreen> {
                              ),),
                            ),
                          ),
-                         Text(data['time']),
                        ],
                      )
                    ],
@@ -103,14 +111,14 @@ class _MessageScreenState extends State<MessageScreen> {
            child: Row(
              children: [
                Expanded(
-                   child: TextFieldWidget(
-                     fillColor: Colors.grey.withOpacity(0.1),
-                     hintColor: Colors.black.withOpacity(.2),
-                     suffixIcon: Icons.link,
-                     suffixIconColor: Colors.grey,
-                     hintText: 'Type a message',
-                     prefixIcon: Icons.emoji_emotions_outlined,
-                     prefixIconColor: Colors.grey,
+                   child: Container(
+                     height: 50,
+                     width: double.infinity,
+                     decoration: BoxDecoration(
+                       color: Colors.grey.shade200,
+                       borderRadius: BorderRadius.circular(10)
+                     ),
+                     child: const Camera(),
                    )
                ),
                SizedBox(width: 7,),
