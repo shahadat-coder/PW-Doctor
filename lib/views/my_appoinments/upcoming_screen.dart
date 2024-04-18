@@ -4,8 +4,8 @@ import 'package:pw_doctor/models/fav_doctor_model.dart';
 import 'package:pw_doctor/models/my_appoinment_model/upcoming_model.dart';
 import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/utils/colors.dart';
+import 'package:pw_doctor/views/my_appoinments/doctor_details.dart';
 import 'package:pw_doctor/views/my_appoinments/widgets/cancel_buttonsheet.dart';
-
 import 'widgets/choose_button.dart';
 
 class UpcomingScreen extends StatefulWidget {
@@ -16,6 +16,7 @@ class UpcomingScreen extends StatefulWidget {
 }
 
 class _UpcomingScreenState extends State<UpcomingScreen> {
+  late final doctor = Get.arguments as UpcomingModel;
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -25,7 +26,7 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
           itemBuilder: (context,index){
             return InkWell(
               onTap: (){
-                Get.toNamed(RouteNames.doctorDetail);
+                Get.to(DoctorDetails(doctor:  upcomingData[index],));
               },
               child: Card(
                 elevation: 0,
@@ -97,7 +98,7 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
                                  const SizedBox(width: 15,),
                                  Image.asset('${upcomingData[index].AssetImage}',height: 55,width: 55,),
                                ],
-                             ),
+                                                                                                                                                      ),
                             Text(
                               '${upcomingData[index].date}',
                               style:  const TextStyle(

@@ -4,19 +4,16 @@ import 'package:pw_doctor/global_widgets/code_container.dart';
 import 'package:pw_doctor/global_widgets/custom_appbar.dart';
 import 'package:pw_doctor/global_widgets/custom_button.dart';
 import 'package:pw_doctor/global_widgets/custom_text.dart';
+import 'package:pw_doctor/models/my_appoinment_model/upcoming_model.dart';
 import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/views/doctor_appoinment_booking/widget/card_widget.dart';
 
-class DoctorDetails extends StatefulWidget {
-  const DoctorDetails({super.key});
-
-  @override
-  State<DoctorDetails> createState() => _DoctorDetailsState();
-}
-
-class _DoctorDetailsState extends State<DoctorDetails> {
+class DoctorDetails extends StatelessWidget {
+  final UpcomingModel doctor;
+  const DoctorDetails({super.key, required this.doctor,});
   @override
   Widget build(BuildContext context) {
+    String imageUrl = doctor.UrlImage;
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
       appBar: const CustomAppBar(
@@ -33,10 +30,11 @@ class _DoctorDetailsState extends State<DoctorDetails> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(height: 15,),
-          const CardWidget(
-            image: 'https://media.istockphoto.com/id/1470505351/photo/portrait-of-a-smiling-doctor-holding-glasses-and-a-mobile-phone-at-the-office.webp?b=1&s=170667a&w=0&k=20&c=8CebFLF4PFnt9JYJznGhYoOQxcyHLVpTGVfkvEsZd2Q=',
-            name: 'Dr. Travis Westaby',
-            trade: 'Immunologists',
+
+           CardWidget(
+             image: imageUrl,
+            name: ("${doctor.name}"),
+            trade: '${doctor.trade}',
             hospital: 'The Volley Hospital in California US',
           ),
           const SizedBox(height: 20,),
@@ -83,11 +81,11 @@ class _DoctorDetailsState extends State<DoctorDetails> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                bodyMedium(context, 'Full Name\t\t\t\t\t\t: Andrew Ainsley'),
+                bodyMedium(context, 'Full Name\t\t\t\t\t\t: ${doctor.name}'),
                 const SizedBox(height: 8,),
-                bodyMedium(context, 'Gender\t\t\t\t\t\t\t\t\t\t\t: male'),
+                bodyMedium(context, 'Gender\t\t\t\t\t\t\t\t\t\t\t: ${doctor.gender}'),
                 const SizedBox(height: 8,),
-                bodyMedium(context, 'Age\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t: 27'),
+                bodyMedium(context, 'Age\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t: ${doctor.age}'),
                 const SizedBox(height: 8,),
                 bodyMedium(context, "Problem\t\t\t\t\t\t\t\t\t\t: your body doesn't make enough insulin or\n"
                                                               "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tcan't use it as well as it should. When there\n"
@@ -112,15 +110,16 @@ class _DoctorDetailsState extends State<DoctorDetails> {
           ),
           const SizedBox(height: 15,),
            Center(
-             child: CodeContainer(title: 'Messaging',
-                 assetImage: Image.asset('assets/images/via sms.png'),
+             child: CodeContainer(
+               title: 'Messaging',
+               assetImage: Image.asset(doctor.AssetImage),
                subtitle: 'chat messaging with doctor',
-               money: '\$20',
+               money: '${doctor.doller}',
                sub: '(paid)',
              ),
            ),
           const Spacer(),
-          CustomButton(title: 'Message', onTap: (){
+          CustomButton(title: '${doctor.communicate}', onTap: (){
             Get.toNamed(RouteNames.messageScreen);
           }),
           const SizedBox(height: 10,),

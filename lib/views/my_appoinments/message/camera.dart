@@ -19,6 +19,7 @@ class _CameraState extends State<Camera> {
     if (image != null) {
       setState(() {
         _image = File(image.path);
+        print(image.path);
       });
     }
   }

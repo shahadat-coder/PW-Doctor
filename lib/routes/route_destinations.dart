@@ -1,4 +1,5 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
+import 'package:pw_doctor/models/my_appoinment_model/upcoming_model.dart';
 import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/views/auth/finger_screen.dart';
 import 'package:pw_doctor/views/auth/login_screen.dart';
@@ -144,10 +145,6 @@ class RouteDestinations{
     GetPage(
       name: RouteNames.cancelSchedule,
       page: ()=>  const CancelAppointment(),
-    ),
-    GetPage(
-      name: RouteNames.doctorDetail,
-      page: ()=>  const DoctorDetails(),
     ),
     GetPage(
       name: RouteNames.messageScreen,
