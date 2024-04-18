@@ -119,10 +119,18 @@ class DoctorDetails extends StatelessWidget {
              ),
            ),
           const Spacer(),
-          CustomButton(title: '${doctor.communicate}', onTap: (){
-            Get.toNamed(RouteNames.messageScreen);
-          }),
-          const SizedBox(height: 10,),
+      CustomButton(title: '${doctor.communicate}', onTap: (){
+        // Determine which screen to navigate based on the selection
+        if (doctor.communicate == 'Messaging') {
+          Get.toNamed(RouteNames.messageScreen);
+        } else if (doctor.communicate == 'Audio Call') {
+          // Get.toNamed(RouteNames.videoCall);
+        } else if (doctor.communicate == 'Video Call') {
+          // Get.toNamed(RouteNames.videoCallScreen);
+        }
+      }),
+
+      const SizedBox(height: 10,),
         ],
       ),
     );
