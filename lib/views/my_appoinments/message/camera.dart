@@ -30,16 +30,16 @@ class _CameraState extends State<Camera> {
       padding: const EdgeInsets.all(8.0),
       child: Row(
         children: [
-          Icon(Icons.emoji_emotions_outlined,color: Colors.grey,),
-          SizedBox(width: 15,),
-          Text('Type a message',style: TextStyle(
+          const Icon(Icons.emoji_emotions_outlined,color: Colors.grey,),
+          const SizedBox(width: 15,),
+          const Text('Type a message',style: TextStyle(
             color: Colors.grey
           ),),
-          SizedBox(width: 75,),
-          IconButton(onPressed: (){}, icon: Icon(Icons.link,color: Colors.grey,)),
+          const SizedBox(width: 75,),
+          IconButton(onPressed: (){}, icon: const Icon(Icons.link,color: Colors.grey,)),
           IconButton(onPressed: (){
             getImage;
-          }, icon: Icon(Icons.camera_alt,color: Colors.grey,)),
+          }, icon: const Icon(Icons.camera_alt,color: Colors.grey,)),
         ],
       ),
     );

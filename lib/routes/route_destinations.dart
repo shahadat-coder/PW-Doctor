@@ -1,5 +1,4 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
-import 'package:pw_doctor/models/my_appoinment_model/upcoming_model.dart';
 import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/views/auth/finger_screen.dart';
 import 'package:pw_doctor/views/auth/login_screen.dart';
@@ -26,7 +25,6 @@ import 'package:pw_doctor/views/home/notification_screen.dart';
 import 'package:pw_doctor/views/my_appoinments/Reschedule_screen.dart';
 import 'package:pw_doctor/views/my_appoinments/_schedule_time.dart';
 import 'package:pw_doctor/views/my_appoinments/cancel_appoinment.dart';
-import 'package:pw_doctor/views/my_appoinments/doctor_details.dart';
 import 'package:pw_doctor/views/my_appoinments/message/message_screen.dart';
 import 'package:pw_doctor/views/onboardings/onboarding_screen.dart';
 import 'package:pw_doctor/views/otp_verification/otp_verification.dart';
