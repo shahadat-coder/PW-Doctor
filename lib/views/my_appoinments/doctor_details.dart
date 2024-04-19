@@ -7,6 +7,7 @@ import 'package:pw_doctor/global_widgets/custom_text.dart';
 import 'package:pw_doctor/models/my_appoinment_model/upcoming_model.dart';
 import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/views/doctor_appoinment_booking/widget/card_widget.dart';
+import 'package:pw_doctor/views/my_appoinments/message/message_screen.dart';
 
 class DoctorDetails extends StatelessWidget {
   final UpcomingModel doctor;
@@ -121,9 +122,8 @@ class DoctorDetails extends StatelessWidget {
            ),
           const Spacer(),
       CustomButton(title: '${doctor.communicate}', onTap: (){
-        // Determine which screen to navigate based on the selection
         if (doctor.communicate == 'Messaging') {
-          Get.toNamed(RouteNames.messageScreen);
+          Get.to(const MessageScreen());
         } else if (doctor.communicate == 'Audio Call') {
           // Get.toNamed(RouteNames.videoCall);
         } else if (doctor.communicate == 'Video Call') {

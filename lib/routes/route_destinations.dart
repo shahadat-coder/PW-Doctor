@@ -145,15 +145,6 @@ class RouteDestinations{
       name: RouteNames.cancelSchedule,
       page: ()=>  const CancelAppointment(),
     ),
-    GetPage(
-      name: RouteNames.messageScreen,
-      page: ()=>  const MessageScreen(),
-    ),
-    GetPage(
-      name: RouteNames.videoCall,
-      page: ()=>  const VideoCallScreen(),
-    ),
-
 
   ];
 
