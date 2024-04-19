@@ -5,7 +5,6 @@ import 'package:pw_doctor/global_widgets/custom_appbar.dart';
 import 'package:pw_doctor/global_widgets/custom_button.dart';
 import 'package:pw_doctor/global_widgets/custom_text.dart';
 import 'package:pw_doctor/models/my_appoinment_model/upcoming_model.dart';
-import 'package:pw_doctor/routes/route_names.dart';
 import 'package:pw_doctor/views/doctor_appoinment_booking/widget/card_widget.dart';
 import 'package:pw_doctor/views/my_appoinments/message/message_screen.dart';
 
