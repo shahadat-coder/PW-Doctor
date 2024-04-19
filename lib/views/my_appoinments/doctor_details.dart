@@ -109,6 +109,7 @@ class DoctorDetails extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 15,),
+
            Center(
              child: CodeContainer(
                title: 'Messaging',
